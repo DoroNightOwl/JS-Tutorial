@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="css/style.css"> 
     </head>
     <body>
-        <img src="images/bg.png"
+        <img src="images/bg.jpg"
                class="background_image">
         <div class="flex_column"
              style="height: 100vh;">
@@ -25,8 +25,9 @@
                 <button type="submit"
                         class="form_button"
                         style="margin-top: 0.5rem;">Login</button>
-                <% if(locals.failed_login){ %>
-                    <h1 style="color: red;">Login failed.</h1>
+                        <span>Don't have an account ? <a href="/register" style="color: blue;">Register here !</a></span>
+                <% if(locals.login_response){ %>
+                    <h1 style="color: red;"><%= login_response %></h1>
                 <% } %>
             </form>
         </div>

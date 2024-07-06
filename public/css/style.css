@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-:root {
-    --input_color: rgb(220, 220, 220);
-    --button_color: rgb(92, 6, 107);
-}
+@import url("variables.css");
+a {text-decoration: none; color: inherit}
+a:hover {text-decoration: none; color: inherit}
 *{
     margin: 0;
     padding: 0;
@@ -24,6 +23,11 @@
     flex-direction: column;
     justify-content: center;
 }
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
 .input_design {
     display: block;
@@ -36,11 +40,14 @@
 
 .form_button {
     width: 100%;
-    background: var(--button_color);
+    background: var(--main_color);
     border: none;
     border-radius: 1rem;
-    color: white;
+    color: var(--secondary_color);
     padding: 0.75rem;
+}
+.form_button:hover {
+    color: white;
 }
 
 .background_image {
@@ -50,4 +57,23 @@
     height: 100vh;
     left: 0;
     top: 0;
+}
+.widget_container {
+    border-radius: 1rem;
+    box-shadow: 0px 0px 1rem rgb(180, 180, 180);
+    overflow: hidden;
+}
+.home_widget_top {
+    width: 100%;
+    height: 68%;
+    background: linear-gradient(to bottom right, var(--secondary_color), var(--main_color));
+}
+.home_widget_bottom {
+    height: 32%;
+    text-align: center;
+}
+.home_widget_icon {
+    display: block;
+    height: 5rem;
+    width: 5rem;
 }

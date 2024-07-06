@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css"> 
+    </head>
+    <body>
+        <img src="images/bg.jpg"
+               class="background_image">
+        <div class="flex_column"
+             style="height: 100vh;">
+            <form action="/register" method="POST" enctype="application/x-www-form-urlencoded" 
+                class="form_container"
+                style="margin-left: 20%">
+                <div style="width: 24rem;">
+                    <div>Username</div>
+                    <input class="input_design" name="username"
+                           style="margin-top: 0.125rem;">
+                </div>
+                <div style="width: 24rem;">
+                    <div>Email</div>
+                    <input class="input_design" name="email"
+                           style="margin-top: 0.125rem;">
+                </div>
+                <div style="width: 24rem;">
+                    <div>Password</div>
+                    <input class="input_design" name="password"
+                           style="margin-top: 0.125rem;"
+                           type="password">
+                </div>
+                <div style="width: 24rem;">
+                    <div>Confirm password</div>
+                    <input class="input_design" name="confirm_password"
+                           style="margin-top: 0.125rem;"
+                           type="password">
+                </div>
+                <button type="submit"
+                        class="form_button"
+                        style="margin-top: 0.5rem;">Login</button>
+                        <span>You are already registered? <a href="/login" style="color: blue;">Login here!</a></span>
+                <% if(locals.register_response){ %>
+                    <h1 style="color: red;"><%= register_response %></h1>
+                <% } %>
+            </form>
+        </div>
+    </body>
+</html>
